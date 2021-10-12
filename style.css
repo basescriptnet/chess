@@ -1,0 +1,58 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+body {
+    margin-bottom: 40px;
+}
+canvas.flipped {
+    transform: rotate(180deg);
+}
+
+.board {
+    /* display: grid; */
+    width: 572px;
+    height: 572px;
+    background: #eee;
+    margin-left: 15%;
+}
+main {
+    display: flex;
+}
+.ncanvas {
+    display: flex;
+}
+.numbers {
+    display: flex;
+    width: 30px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.numbers span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+}
+.letters {
+    margin-left: 30px;
+    display: flex;
+    margin-right: 30px;
+}
+.letters span {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    height: 30px;
+    display: block;
+    width: 64px;
+    text-align: center;
+}
+.board.reversed .letters {
+    flex-direction: row-reverse;
+}
+
+.board.reversed .numbers {
+    flex-direction: column-reverse;
+}

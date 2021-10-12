@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chess</title>
+</head>
+<body>
+    <h4 align="center"><span id="whoMoves">Whites</span> to move</h4>
+    <!-- <h4 align="center"><span id="iheck"> _ </span></h4> -->
+    <main>
+        <div class="board">
+            <div class="letters">
+                <span>a</span>
+                <span>b</span>
+                <span>c</span>
+                <span>d</span>
+                <span>e</span>
+                <span>f</span>
+                <span>g</span>
+                <span>h</span>
+            </div>
+            <div class="ncanvas">
+                <div class="numbers">
+                    <span>8</span>
+                    <span>7</span>
+                    <span>6</span>
+                    <span>5</span>
+                    <span>4</span>
+                    <span>3</span>
+                    <span>2</span>
+                    <span>1</span>
+                </div>
+                <canvas id="canvas"></canvas>
+                <div class="numbers">
+                    <span>8</span>
+                    <span>7</span>
+                    <span>6</span>
+                    <span>5</span>
+                    <span>4</span>
+                    <span>3</span>
+                    <span>2</span>
+                    <span>1</span>
+                </div>
+            </div>
+            <div class="letters">
+                <span>a</span>
+                <span>b</span>
+                <span>c</span>
+                <span>d</span>
+                <span>e</span>
+                <span>f</span>
+                <span>g</span>
+                <span>h</span>
+            </div>
+        </div>
+        <aside>
+            <span></span>
+        </aside>
+    </main>
+    <img src="imgs/pawn_black.png" id="pawn_black" hidden>
+    <img src="imgs/pawn_white.png" id="pawn_white" hidden>
+    <img src="imgs/knight_white.png" id="knight_white" hidden>
+    <img src="imgs/knight_black.png" id="knight_black" hidden>
+    <img src="imgs/rook_white.png" id="rook_white" hidden>
+    <img src="imgs/rook_black.png" id="rook_black" hidden>
+    <img src="imgs/bishop_white.png" id="bishop_white" hidden>
+    <img src="imgs/bishop_black.png" id="bishop_black" hidden>
+    <img src="imgs/queen_white.png" id="queen_white" hidden>
+    <img src="imgs/queen_black.png" id="queen_black" hidden>
+    <img src="imgs/king_white.png" id="king_white" hidden>
+    <img src="imgs/king_black.png" id="king_black" hidden>
+    <img src="imgs/alfil_white.svg" width="64px" height="64px" id="alfil_white" hidden>
+    <img src="imgs/alfil_black.svg" width="64px" height="64px" id="alfil_black" hidden>
+    <img src="imgs/ferz_white.png" width="64px" height="64px" id="ferz_white" hidden>
+    <img src="imgs/ferz_black.png" width="64px" height="64px" id="ferz_black" hidden>
+
+    <!-- <img src="imgs/pawn_black.png" id="P" hidden>
+    <img src="imgs/pawn_white.png" id="p" hidden>
+    <img src="imgs/knight_white.png" id="h" hidden>
+    <img src="imgs/knight_black.png" id="H" hidden>
+    <img src="imgs/rook_white.png" id="r" hidden>
+    <img src="imgs/rook_black.png" id="R" hidden>
+    <img src="imgs/bishop_white.png" id="b" hidden>
+    <img src="imgs/bishop_black.png" id="B" hidden>
+    <img src="imgs/queen_white.png" id="q" hidden>
+    <img src="imgs/queen_black.png" id="Q" hidden>
+    <img src="imgs/king_white.png" id="k" hidden>
+    <img src="imgs/king_black.png" id="K" hidden>
+    <img src="imgs/alfil_white.svg" id="a" hidden>
+    <img src="imgs/alfil_black.svg" id="A" hidden> -->
+    <button onclick="flipWhite = !flipWhite; draw(board)">Flip White</button>
+    <button onclick="flipBlack = !flipBlack; draw(board)">Flip Black</button>
+    <button onclick="flipTheBoard(); draw(board)">Flip board</button>
+    <button onclick="board.undo()">Undo</button>
+    <button onclick="board.forward()">Forward</button>
+    <button onclick="switchVersion()">Switch game type</button>
+    <button onclick="board = new Board();draw(board);">New Game</button>
+    <button id="iceBtn">Ice-power!</button>
+    <br>
+    <hr>
+    <div id="info">
+        Selected: <span id="selectedElement"></span>
+    </div>
+
+    <script src="init.js" defer></script>
+    <!-- <script src="findMoves.js" defer></script> -->
+    <script src="pieces.js" defer></script>
+    <script src="board.js" defer></script>
+    <script src="clicks.js" defer></script>
+    <script src="boardDrawer.js" defer></script>
+    <script src="ai.js" defer></script>
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
